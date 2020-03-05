@@ -10,17 +10,18 @@
 <body>
 
     <div id="app">
-        <input onkeypress="showAlert()"/>
-        <button onmouseover="showAlert()">Clique Aqui</button>
-        <button onclick="showAlert()">Clique Aqui</button>
+        <input type="text" name="name"/>
+        <button class="button">Adicionar</button>
     </div>
 
     <script>
-        
-        function showAlert() {
-            alert('Botão foi clicado');
+        var inputElement = document.querySelector('input[name]');
+        var btnElement = document.querySelector('button.button');
+        btnElement.onclick = function() {
+            var text = inputElement.value;
+            alert(text);
         }
-
+        console.log(inputElement);
     </script>
 
 </body>
