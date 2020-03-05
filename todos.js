@@ -7,3 +7,15 @@ var todos = [
     'Estudar JavaScript',
     'Acessar comunidade da Rocktseat'
 ];
+
+function renderTodos() {
+    for(todo of todos) {
+        var todoElements = document.createElement('li');
+        var todoText = document.createTextNode(todo);
+
+        todoElements.appendChild(todoText);
+        listELement.appendChild(todoELement);
+    }
+}
+
+renderTodos();
