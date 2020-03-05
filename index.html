@@ -5,22 +5,12 @@
     <body>
         <script>
 
-            function returnSex(sex) {
-                switch (sex) {
-                    case 'M':
-                        return 'Masculino';
-                    case 'F':
-                        return 'Feminino';
-                    default:
-                        return 'não existe';
-                    break;
-                }
+            var sex = 'F';
 
-            }
+            var masc = sex === 'M';
 
-            var result = returnSex('a');
-            console.log(result);
-
+            console.log(masc);
+            
         </script>
     </body>
 </html>
