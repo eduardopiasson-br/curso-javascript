@@ -1,6 +1,6 @@
-var listELement = document.querySelector('#app ul');
-var imputElement = document.querySelector('#app input');
-var buttonELement = document.querySelector('#app button');
+var listElement = document.querySelector('#app ul');
+var inputElement = document.querySelector('#app input');
+var buttonElement = document.querySelector('#app button');
 
 var todos = [
     'Fazer café',
@@ -9,13 +9,26 @@ var todos = [
 ];
 
 function renderTodos() {
-    listELement.innerHTML = '';
+    listElement.innerHTML = '';
     for(todo of todos) {
-        var todoElements = document.createElement('li');
+        var todoElement = document.createElement('li');
         var todoText = document.createTextNode(todo);
 
-        todoElements.appendChild(todoText);
-        listELement.appendChild(todoELement);
+        var linkElement = document.createElement('a');
+
+        linkElement.setAttribute('href', '#');
+
+        var pos = todos.indexOf(todo);
+        linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')');
+
+        var linkText = document.createTextNode('Excluir');
+
+        linkElement.appendChild(linkText);
+
+        todoElement.appendChild(todoText);
+        todoElement.appendChild(linkElement);
+
+        listElement.appendChild(todoElement);
     }
 }
 
@@ -29,4 +42,9 @@ function addTodo() {
     renderTodos();
 }
 
-buttonELement.onclick = addTodo;
+buttonElement.onclick = addTodo;
+
+function deleteTodo(pos) {
+    todos.splice(pos, 1);
+    renderTodos();
+}
