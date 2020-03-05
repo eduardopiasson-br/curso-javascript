@@ -10,18 +10,16 @@
 <body>
 
     <div id="app">
-        <input type="text" name="name"/>
-        <button class="button">Adicionar</button>
+        <div class="box"></div>
     </div>
 
     <script>
-        var inputElement = document.querySelector('input[name]');
-        var btnElement = document.querySelector('button.button');
-        btnElement.onclick = function() {
-            var text = inputElement.value;
-            alert(text);
-        }
-        console.log(inputElement);
+        var boxElement = document.querySelector('.box');
+
+        boxElement.style.widht = 100;
+        boxElement.style.heigth = 100;
+        boxElement.style.backgroundColor = '#f00';
+
     </script>
 
 </body>
