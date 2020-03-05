@@ -1,0 +1,67 @@
+// ---------- MÓDULO 1 ---------- //
+
+        // ATIVIDADE 1
+        // var address = {
+        //     street: 'Rua JavaScript',
+        //     number: 1122,
+        //     district: 'Centro',
+        //     city: 'São Paulo',
+        //     uf: 'SP'
+        // }
+        // console.log("O usuário mora em ", address.city, "/", address.uf, " no bairro ", address.district, ", na rua '", address.street, "' com nº ", address.number, ".");
+
+        // ATIVIDADE 2
+        // function pairs(x, y) {
+        //     for (i = x; i <= y; i++) {
+        //         console.log(i);
+        //     }
+        // }
+        // pairs(32, 321);
+
+        // ATIVIDADE 3
+        // function haveSkills(skills) {
+        //     if (skills.indexOf('Javascript') === 0) {
+        //         console.log("Have Skill");                
+        //     } else {
+        //         console.log("Don't have skill :(");
+        //     }            
+        // }
+        // var skills = ["Javascript", 'ReactJS', 'React Native'];
+        // haveSkills(skills); 
+
+        // ATIVIDADE 4
+        // function experience(years) {
+        //     switch(true) {
+        //         case years >= 0 && years <= 1:
+        //             console.log("Sua experiência de ", years, " anos e te classifica como iniciante.");
+        //             break;
+        //         case years >= 2 && years <= 3:
+        //             console.log("Sua experiência de ", years, " anos e te classifica como intermediário.");
+        //             break;
+        //         case years >= 4 && years <= 6:
+        //             console.log("Sua experiência de ", years, " anos e te classifica como Avançado.");
+        //             break;
+        //         default:
+        //             console.log("Sua experiência de ", years, " anos e te classifica como Master.");
+        //             break;
+        //     }
+        // }
+        // var yearsStuding = 5;
+        // experience(yearsStuding);
+        
+        // ATIVIDADE 5
+        // var users = [
+        //     {
+        //         name: "Diego",
+        //         skills: ["Javascript", "ReactJS", "Redux"]
+        //     },
+        //     {
+        //         name: "Gabriel",
+        //         skills: ["VueJS", "Ruby on Rails", "Elixir"]
+        //     }
+        // ];
+
+        // for(const u of users) {
+        //     const { name, skills } = u;
+        //     console.log("O", u.name, "possui as habilidades:", u.skills.join(", "));
+        // }
