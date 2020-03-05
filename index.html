@@ -5,15 +5,22 @@
     <body>
         <script>
 
-            function sum(number1, number2) {
-                var result = number1 + number2;
+            function returnSex(sex) {
+                switch (sex) {
+                    case 'M':
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    default:
+                        return 'não existe';
+                    break;
+                }
 
-                return result
             }
 
-            var result = sum(1, 2);
+            var result = returnSex('a');
             console.log(result);
-            
+
         </script>
     </body>
 </html>
