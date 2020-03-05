@@ -1,0 +1,45 @@
+var btnElement = document.getElementById("newSquare");
+      var squaresElement = document.getElementById("team");
+      btnElement.onclick = function() {
+        var square = document.createElement("div");
+        square.style.width = "100px";
+        square.style.height = "100px";
+        square.style.backgroundColor = "#F00";
+
+        square.onmouseover = function() {
+          square.style.backgroundColor = getRandomColor();
+        };
+        squaresElement.appendChild(square);
+      };
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      var names = ["Diego","Gabriel","Lucas"];
+      var listElement = document.querySelector("ul");
+      var inputNewName = document.getElementById("nome");
+
+      for (name of names) {
+        itemAdded(name);
+      }
+
+      function itemAdded(name) {
+        console.log("TCL: itemAdded -> name", name);
+        var childElement = document.createElement("li");
+        var childText = document.createTextNode(name);
+
+        childElement.appendChild(childText);
+
+        listElement.appendChild(childElement);
+      }
+      function adicionar() {
+        itemAdded(inputNewName.value);
+
+        inputNewName.value = "";
+      }
