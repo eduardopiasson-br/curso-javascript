@@ -9,9 +9,17 @@
 
 <body>
 
+    <div id="app">
+        <input onkeypress="showAlert()"/>
+        <button onmouseover="showAlert()">Clique Aqui</button>
+        <button onclick="showAlert()">Clique Aqui</button>
+    </div>
+
     <script>
         
-        
+        function showAlert() {
+            alert('Botão foi clicado');
+        }
 
     </script>
 
