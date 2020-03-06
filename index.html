@@ -8,26 +8,54 @@
         body {
             display: -webkit-box;
             text-align: center;
+            background-color: rgba(37, 8, 56, 0.904);
         }
         div {
             width: 100%;
             display: inline-block;
+            padding: 20px;
             margin: 20px;
+            background-color: rgba(153, 250, 255, 0.788);
+            border-radius: 10px;
+        }
+        button {
+            border-radius: 5px;
+            background-color: rgba(33, 222, 255, 0.651);
+        }
+        hr {
+            max-width: 50%;
+            text-align: center;
+        }
+        h2 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        h4 {
+            height: 25px;
+            width: auto;
+            border-radius: 7px;
+            color: rgb(26, 22, 63);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            align-items: center;
         }
     </style>
   </head>
   <body>
     <div>
-        <h4><strong>Exercício 1: Verificação de Idade</strong></h4>
+        <h2><strong>Exercício 1:</strong></h2>
+        <h4>Verificação de Idade</h4><hr><hr>       
         <input tyme="text" id="age" />
-        <button onclick="isMajor()">Verificar idade</button>
+        <button onclick="isMajor()">Verificar idade</button><hr><hr>
         <i></i>
     </div>    
     <div>
-        <h4><strong>Exercício 2: Exibindo dados de Usuário do GitHub</strong></h4>
+        <h2><strong>Exercício 2:</strong></h2>
+        <h4>Exibindo dados de Usuário do GitHub</h4><hr><hr>
         <input tyme="text" id="user" />
-        <button onclick="userGit()">Adicionar</button>
-        <ul class="git"></ul>
+        <button onclick="userGit()">Visualizar</button><hr><hr>        
+    </div>
+    <div>
+        <h3>RESULTADOS</h3>
+        <ul></ul>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="activities.js"></script>
