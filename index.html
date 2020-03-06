@@ -4,15 +4,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Curso JavaScript</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            display: -webkit-box;
+            text-align: center;
+        }
+        div {
+            width: 100%;
+            display: inline-block;
+            margin: 20px;
+        }
+    </style>
   </head>
-  <body style="display: -webkit-box">
+  <body>
     <div>
-        <ul></ul>
+        <h4><strong>Exercício 1: Verificação de Idade</strong></h4>
         <input tyme="text" id="age" />
         <button onclick="isMajor()">Verificar idade</button>
-        <input tyme="text" id="user" />
-        <button onclick="getUserRepo()">Adicionar</button>
+        <i></i>
     </div>    
+    <div>
+        <h4><strong>Exercício 2: Exibindo dados de Usuário do GitHub</strong></h4>
+        <input tyme="text" id="user" />
+        <button onclick="userGit()">Adicionar</button>
+        <ul class="git"></ul>
+    </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="activities.js"></script>
   </body>
