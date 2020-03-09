@@ -6,25 +6,36 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//REST 
-function soma(a, b) {
-  for (var _len = arguments.length, params = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-    params[_key - 2] = arguments[_key];
-  }
-
-  return params;
-}
-
-console.log(soma(1, 3, 4, 4, 5, 6, 7)); //SPREAD
-
-var usuario1 = {
-  nome: 'Diego',
-  idade: 23,
+var usuarios = [{
+  nome: 'Eduardo',
+  idade: 21,
+  empresa: 'Trend Mobile'
+}, {
+  nome: 'André',
+  idade: 15,
   empresa: 'Rocketseat'
-};
-
-var usuario2 = _objectSpread({}, usuario1, {
-  nome: 'Gabriel'
+}, {
+  nome: 'Andreo',
+  idade: 26,
+  empresa: 'Google'
+}];
+var idades = usuarios.map(function (usuario) {
+  return usuario.idade;
 });
-
-console.log(usuario2);
+console.log(idades);
+var rocketseat18 = usuarios.filter(function (usuario) {
+  return usuario.empresa === "Rocketseat" && usuario.idade >= 18;
+});
+console.log(rocketseat18);
+var google = usuarios.find(function (usuario) {
+  return usuario.empresa === "Google";
+});
+console.log(google);
+var calculo = usuarios.map(function (usuario) {
+  return _objectSpread({}, usuario, {
+    idade: usuario.idade * 2
+  });
+}).filter(function (usuario) {
+  return usuario.idade <= 50;
+});
+console.log(calculo);

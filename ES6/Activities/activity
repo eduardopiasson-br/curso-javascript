@@ -1,3 +1,35 @@
+        ATIVIDADADES
+
+-Exercício 1
+
+class Usuario {
+    constructor(email, senha) {
+        this.email = email;
+        this.senha = senha;
+    }
+
+    isAdmin() {
+        return this.admin === true;
+    }
+}
+
+class Admin extends Usuario {
+    constructor(email, senha) {
+        super(email, senha);
+
+        this.admin = true;
+    }
+}
+
+const User1 = new Usuario("email@teste.com", "senha123");
+const Adm1 = new Admin("email@teste.com", "senha123");
+
+console.log(User1.isAdmin());
+console.log(Adm1.isAdmin()); 
+
+
+-Exercício 2 
+
 const usuarios = [
     { nome: 'Eduardo', idade: 21, empresa: 'Trend Mobile' },
     { nome: 'André', idade: 15, empresa: 'Rocketseat' },
@@ -20,3 +52,9 @@ const calculo = usuarios
     .filter(usuario => usuario.idade <= 50);
 
 console.log(calculo);
+
+
+-Exercício 3
+
+
+
