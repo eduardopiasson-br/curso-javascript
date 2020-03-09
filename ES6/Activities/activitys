@@ -1,0 +1,177 @@
+        ATIVIDADADES
+
+-Exercício 1
+
+class Usuario {
+    constructor(email, senha) {
+        this.email = email;
+        this.senha = senha;
+    }
+
+    isAdmin() {
+        return this.admin === true;
+    }
+}
+
+class Admin extends Usuario {
+    constructor(email, senha) {
+        super(email, senha);
+
+        this.admin = true;
+    }
+}
+
+const User1 = new Usuario("email@teste.com", "senha123");
+const Adm1 = new Admin("email@teste.com", "senha123");
+
+console.log(User1.isAdmin());
+console.log(Adm1.isAdmin()); 
+
+
+-Exercício 2 
+
+const usuarios = [
+    { nome: 'Eduardo', idade: 21, empresa: 'Trend Mobile' },
+    { nome: 'André', idade: 15, empresa: 'Rocketseat' },
+    { nome: 'Andreo', idade: 26, empresa: 'Google' }
+];
+
+const idades = usuarios.map(usuario => usuario.idade);
+console.log(idades);
+
+const rocketseat = usuarios.filter(usuario => usuario.empresa === "Rocketseat" && usuario.idade >= 18);
+console.log(rocketseat);
+
+const google = usuarios.find(usuario => usuario.empresa === "Google");
+console.log(google);
+
+const calculo = usuarios 
+    .map(usuario => ({ ...usuario, idade: usuario.idade * 2}))
+    .filter(usuario => usuario.idade <= 50);
+
+console.log(calculo);
+
+
+-Exercício 3
+
+//3.1
+const arr = [1, 2, 3, 4, 5];
+
+arr.map(item => item + 10);
+
+//3.2
+
+const usuario = {nome: 'Diego', idade: 23};
+
+const mostrarIdade = usuario => usuario.idade;
+mostrarIdade(usuario);
+console.log(mostrarIdade);
+
+//3.3
+
+const nome = 'Diego';
+const idade = 23;
+
+const mostraUsuario = (nome = 'Diego', idade = 18) => ({
+    nome,
+    idade
+});
+
+mostraUsuario(nome, idade);
+mostraUsuario(nome);
+
+//3.4
+
+const promise = () => Promise((resolve, reject) => resolve());
+
+
+-Exercício 4
+
+//4.1
+const empresa = {
+    nome: 'Rocketseat',
+    endereco: {
+        cidade: 'Rio do Sul',
+        estado: 'SC',
+    }
+};
+
+const { nome, endereco: {cidade, estado}} = empresa
+
+console.log(nome);
+console.log(cidade);
+console.log(estado);
+
+//4.2
+function mostraInfo({nome, idade}) {
+    return `${nome} tem ${idade} anos.`; 
+}
+
+mostraInfo({
+    nome: 'Diego',
+    idade: 23
+})
+
+
+-Exercício 5
+
+//5.1
+const arr = [1, 2, 3, 4, 5, 6];
+
+var [x, ...y] = arr;
+
+console.log(x);
+console.log(y);
+
+function soma(...nums){
+    return nums.reduce((a,b) => a + b);
+}
+
+console.log(soma(1, 2, 3, 4, 5, 6));
+console.log(soma(1, 2));
+
+//5.2
+
+const usuario = { 
+    nome: 'Diego',
+    idade: 23,
+    endereco: {
+        cidade: 'Rio do Sul',
+        uf: 'SC',
+        pais: 'Brasil',
+    }
+};
+
+const usuario2 = {
+    nome: 'Gabriel',
+    ...usuario
+};
+
+const usuario3 = {
+    ...usuario,
+    endereco: {
+        ...usuario.endereco,
+        cidade = 'Lontras'
+    }    
+};
+
+
+-Exercício 6 
+
+const usuario = 'Diego';
+const idade = 23;
+
+console.log(`O usuário ${usuario} possui ${idade} anos`);
+
+
+-Exercício 7
+
+const nome = 'Diego';
+const idade = 23;
+
+const usuario = { 
+    nome, idade, cidade: 'Rio do Sul-SC',
+};
+console.log(usuario);
+
+
